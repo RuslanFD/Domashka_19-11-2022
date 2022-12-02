@@ -9,35 +9,33 @@
 </head>
 <body>
     <div class="container">
-        <header>
-            <nav>
-                <div class="left_nav">
-                    <div>
-                        <span><a href="#">Автошрот</a></span>
-                    </div>
-                    <div>
-                        <span>Викуп авто</span>
-                    </div>
-                    <div>
-                        <span>Доставка і оплата</span>
-                    </div>
-                    <div>
-                        <span>Контакти</span>
-                    </div>
+        <nav>
+            <div class="left_nav">
+                <div>
+                    <span><a href="#">Автошрот</a></span>
                 </div>
-                <div class="right_nav">
-                    <div>
-                        <a href="#">Вхід</a>
-                    </div>
-                    <div class="block_I">
-                        <span>|</span>
-                    </div>
-                    <div>
-                        <a href="#" src="">Реєстрація</a>
-                    </div>
+                <div>
+                    <span><a href="#">Викуп авто</a></span>
                 </div>
-            </nav>
-        </header>
+                <div>
+                    <span><a href="#">Доставка і оплата</a></span>
+                </div>
+                <div>
+                    <span><a href="#">Контакти</a></span>
+                </div>
+            </div>
+            <div class="right_nav">
+                <div>
+                    <a href="#">Вхід</a>
+                </div>
+                <div class="block_I">
+                    <span>|</span>
+                </div>
+                <div>
+                    <a href="#" src="">Реєстрація</a>
+                </div>
+            </div>
+        </nav>
         <div class="under_nav">
             <div class="logo_block">
                 <img class="logo" src="./img/logo.jpg">
@@ -64,16 +62,18 @@
                     <input type="text" name="text" class="search_category" placeholder="Пошук категорії">
                 </form>
                 <ul>
-                    <li><a href="#">Інструмент</a><i class="right"></i></li>
+                    <li class="upper_li"><a href="#">Інструмент</a></li>
                     <li><a href="#">Диски, покришки</a></li>
                     <li><a href="#">Кузов всередині</a></li>
                     <li><a href="#">Кузов зовні</a></li>
                     <li><a href="#">Кузовне скло</a></li>
                     <li><a href="#">Оптика</a></li>
+                    <li><a href="#">Салон</a></li>
+                    <li><a href="#">Під капотом</a></li>
                     <li><a href="#">Рульове управління</a></li>
                     <li><a href="#">Підвіска передніх коліс</a></li>
                     <li><a href="#">Підвіска задніх коліс</a></li>
-                    <li><a href="#">Підвіска двигуна/КПП</a></li>
+                    <li class="down_li"><a href="#">Підвіска двигуна/КПП</a></li>
                 </ul>
             </div>
             <div class="hero_block">
@@ -89,15 +89,124 @@
                         Запчастини для Renault Clio IV 2012-2019
                     </h2>
                 </div>
-                <div>
+                <div class="buttons_block">
                     <div class="bt_new_old">
-
+                        <button type="button" class="bt_new">Нові</button>
+                        <button class="bt_in_use" type="button">Б/у</button>
                     </div>
-                    <div class="bt_in_stock">
-
+                    <div class="bt_stock">
+                        <button class="bt_in_stock" type="button">В наявності</button>
+                        <button class="bt_order" type="button">Під замовлення</button>
                     </div>
                 </div>
+                <div class="price_type">
+                    <span>Ціна:</span>
+                    <span>За зростанням</span>
+                </div>
+                <main>
+                    <hr>
+                    <div class="items_result_list">
+                        <div class="items">
+                            <img src="./img/wheel.jpg">
+                            <div class="content">
+                                <h2>Стійка переднього стабілізатора</h2>
+                                <span class="ab_items">
+                                    Опора кулькова Clio IV (12-19)/Clio III (05-12)/Duster (10-17)/Duster (03-17)
+                                </span>
+                                <div>
+                                    <a href="#">900210-AB-18</a> - Renault
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item_price">
+                            <div class="price">
+                                <div><b>500 грн.</b></div>
+                                <div class="in_stock">В наявності</div>
+                            </div>
+                            <div class="button_buy">
+                                <!--<a href="#">СПБ, Майдан Незалежності 14</a>-->
+                                <button type="button"><!--<img src="./img/qqq.png">-->В корзину</button>
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="items_result_list">
+                        <div class="items">
+                            <img src="./img/wheel.jpg">
+                            <div class="content">
+                                <h2>Стійка переднього стабілізатора</h2>
+                                <span class="ab_items">
+                                    Опора кулькова Clio IV (12-19)/Clio III (05-12)/Duster (10-17)/Duster (03-17)
+                                </span>
+                                <div>
+                                    <a href="#">900210-AB-18</a> - Renault
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item_price">
+                            <div class="price">
+                                <div><b>500 грн.</b></div>
+                                <div class="in_stock">В наявності</div>
+                            </div>
+                            <div class="button_buy">
+                                <!--<a href="#">СПБ, Майдан Незалежності 14</a>-->
+                                <button type="button"><!--<img src="./img/qqq.png">-->В корзину</button>
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="items_result_list">
+                        <div class="items">
+                            <img src="./img/wheel.jpg">
+                            <div class="content">
+                                <h2>Стійка переднього стабілізатора</h2>
+                                <span class="ab_items">
+                                    Опора кулькова Clio IV (12-19)/Clio III (05-12)/Duster (10-17)/Duster (03-17)
+                                </span>
+                                <div>
+                                    <a href="#">900210-AB-18</a> - Renault
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item_price">
+                            <div class="price">
+                                <div><b>500 грн.</b></div>
+                                <div class="in_stock">В наявності</div>
+                            </div>
+                            <div class="button_buy">
+                                <!--<a href="#">СПБ, Майдан Незалежності 14</a>-->
+                                <button type="button"><!--<img src="./img/qqq.png">-->В корзину</button>
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="items_result_list">
+                        <div class="items">
+                            <img src="./img/wheel.jpg">
+                            <div class="content">
+                                <h2>Стійка переднього стабілізатора</h2>
+                                <span class="ab_items">
+                                    Опора кулькова Clio IV (12-19)/Clio III (05-12)/Duster (10-17)/Duster (03-17)
+                                </span>
+                                <div>
+                                    <a href="#">900210-AB-18</a> - Renault
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item_price">
+                            <div class="price">
+                                <div><b>500 грн.</b></div>
+                                <div class="in_stock">В наявності</div>
+                            </div>
+                            <div class="button_buy">
+                                <!--<a href="#">СПБ, Майдан Незалежності 14</a>-->
+                                <button type="button"><!--<img src="./img/qqq.png">-->В корзину</button>
+                            </div>
+                        </div>
+                    </div>
+                </main>
             </div>
+            
         </div>
     </div>
 </body>

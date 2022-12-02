@@ -9,17 +9,18 @@
 
 a {
 	text-decoration: none;
-	color:black;
+	color:grey;
 }
 
 .block_I {
 	padding-top: 3px;
 }
 
-header, nav {
+nav {
 	width: calc(100%/12*12);
 	display: flex;
-	background-color: rgba(246, 243, 243, 0.841)
+	background-color: rgba(246, 243, 243, 0.841);
+	font-size: 12px;
 }
 
 
@@ -34,10 +35,15 @@ header, nav {
 	display: flex;
 	justify-content: end;
 	width: calc(100%/12*6);
+	
 }
 
 .right_nav > div {
 	padding-left: 10px;
+}
+
+.right_nav > div > a {
+	color: black;
 }
 
 .logo {
@@ -58,7 +64,13 @@ header, nav {
 	height: 30px;
 }
 
+.bb_block > span > a {
+	font-size: 14px;
+}
+
 .searchbar {
+	display: flex;
+	flex-wrap: wrap;
 	width: calc(100%/12*12);
 	height: 50px;
 	background-color: rgba(255, 187, 0, 0.668);
@@ -80,9 +92,10 @@ input {
 }
 
 .search_parts {
-	width: 70%;
+	width: 60%;
 	border-radius: 2px;
 	margin-right: 20px;
+	font-size: 12px;
 }
 
 .submit {
@@ -91,80 +104,97 @@ input {
 	border: 2px solid #ffffff;
 	border-radius: 2px;
 	height: 27px;
+	width: 70px;
+	font-size: 12px;
 }
 
 .with_number {
 	display: flex;
 	margin-right: 30px;
 	align-items: center;
-	
 }
 
 .with_number > span {
 	color: #ffffff;
-	font-size: 14px;
+	font-size: 12px;
 }
 
-/*main_block*/
+/* main_block Головний блок під шапкою */
 
 .main_block {
-	width: calc(100%/12*12);
 	padding-top: 20px;
 	display: flex;
+	flex-wrap: wrap;
+}
+
+.list_parts {
+	width: calc(100%/12*3);
+	display: flex;
+    flex-wrap: wrap;
+    align-content: baseline;
+	justify-content: flex-start;
 }
 
 li {
-	width: 240px;
-	height: 35px;
+	display: flex;
+	align-items: center;
+	width: 210px;
+	height: 30px;
 	background-color: rgb(232, 231, 231);
 	border: 1px solid rgb(147, 146, 146);
 	list-style: none;
+	font-size: 12px;
+	padding-left: 10px;
+	border-top: 0;
 	
+}
+
+.upper_li {
+	border-top: 1px solid rgb(147, 146, 146);
+	border-top-left-radius: 2px;
+	border-top-right-radius: 2px;
+}
+
+.down_li {
+	border-bottom-left-radius: 2px;
+	border-bottom-right-radius: 2px;
+}
+
+li a {
+	color: black;
 }
 
 ul {
 	margin: 0;
 	padding: 0;
+	display: flex;
+	flex-wrap: wrap;
 }
 
 .search_category {
-	width: 220px;
+	width: 200px;
+	height: 24px;
 	background-color: #ffff;
 	border: 1px solid rgb(147, 146, 146);
 	border-radius: 2px;
 	margin-bottom: 5px;
+	font-size: 12px;
 }
 
-.list_parts {
-	background-color: aquamarine;
-	width: calc(100%/12*3);
-	padding-right: 2px;
-}
-
-i {
-	border: solid black;
-	border-width: 0 3px 3px 0;
-	display: inline-block;
-	padding: 3px;
-}
 .right {
 	transform: rotate(-45deg);
 	-webkit-transform: rotate(-45deg);
 }
 
 .hero_block {
-	background-color: aqua;
 	width: calc(100%/12*9);
-	padding-left: 20px;
 }
-hr {
+.nav_way > div > hr {
 	width: 20px;
 	border-style: groove;
 	background-color: grey;
 }
-.hero_block > div {
-	display: flex;
-}
+
 .hr_block {
 	padding: 2px 4px 0px 4px;
 
@@ -172,6 +202,7 @@ hr {
 
 .nav_way {
 	font-size: 12px;
+	display: flex;
 }
 
 .nav_way_on {
@@ -185,4 +216,199 @@ hr {
 .type_name {
 	margin: 0;
 	font-size: 16px;
+	padding-top: 5px;
+}
+
+/* Buttons_block Блок з кнопками вибору та сортування */
+
+button {
+	font-size: 12px;
+	border-radius: 3px;
+}
+
+.buttons_block {
+	display: flex;
+	justify-content: space-between;
+	padding-top: 10px;
+}
+
+.bt_stock > button {
+	height: 28px;
+	width: 115px;
+	margin-left: 5px;
+}
+
+.bt_stock {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.bt_new_old > button {
+	width: 70px;
+	height: 28px;
+}
+
+.bt_new, .bt_in_stock {
+	background-color: inherit;
+	border-color: rgba(255, 187, 0, 0.668);
+	border-style: solid;
+}
+
+.bt_order, .bt_in_use {
+	background-color: rgba(255, 187, 0, 0.668);
+	border: 0;
+	color: #ffffff;
+}
+
+.price_type {
+	font-size: 12px;
+	padding-top: 10px;
+}
+
+/* Блок каталога товарів */
+
+
+.items_result_list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.items {
+	display: flex;
+}
+
+.items img {
+	width: 140px;
+	height: 140px;
+	padding-right: 10px;
+}
+
+.items h2 {
+	font-size: 16px;
+	margin-bottom: -15px;
+
+}
+
+.content {
+	display: flex;
+    flex-wrap: wrap;
+	width: 300px;
+	font-size: 14px;
+}
+
+.content a {
+	text-decoration: underline;
+	color: blue;
+}
+
+.ab_items, .in_stock {
+	font-size: 12px;
+	color: grey;
+}
+/*
+.price {
+	display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+}
+*/
+.item_price {
+    display: flex;
+	justify-content: space-between;
+    align-items: center;
+    width: 240px;
+}
+
+.button_buy {
+	display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+}
+
+.button_buy button {
+	width: 110px;
+    height: 35px;
+	background-color: rgba(255, 187, 0, 0.668);
+	border: 0;
+	color: #ffffff;	
+}
+
+/* --- ADAPTIVE ---   --- ADAPTIVE ---   --- ADAPTIVE --- */
+
+@media screen and (max-width: 768px) {
+	nav, .under_nav, .searchbar {
+		width: calc(100%/12*12);
+	}
+
+	.list_parts {
+		width: calc(100%/12*12);
+		justify-content: center;
+	}
+
+	.hero_block {
+		width: calc(100%/12*12);
+	}
+
+	ul {
+		justify-content: space-between;
+		padding-top: 5px;
+		padding-bottom: 15px;
+	}
+
+	li {
+		font-size: 16px;
+		width: 225px;
+		height: 35px;
+	}
+
+	main {
+		width: calc(100%/12*12);
+	}
+
+	nav, .search_parts, .submit, .with_number > span, .search_category, .nav_way, button, .price_type, .ab_items, .in_stock {
+		font-size: 16px;
+	}
+
+	.bb_block > span > a, .content {
+		font-size: 18px;
+	}
+
+	input, .type_name, .items h2, b {
+		font-size: 20px;
+	}
+
+	.bt_stock > button {
+		height: 40px;
+		width: 130px;
+	}
+
+	.bt_new_old > button {
+		width: 85px;
+		height: 40px;
+	}
+
+	.searchbar {
+		height: 62px;
+	}
+
+	.submit {
+		height: 40px;
+		width: 115px;
+	}
+
+	.content {
+		width: 430px;
+	}
+
+	.button_buy button {
+		width: 125px;
+		height: 47px;
+	}
+}
+
+@media screen and (max-width: 576px) {
+	.items_result_list {
+		width: calc(100%/12*12);
+	}
 }
