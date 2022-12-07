@@ -1,5 +1,5 @@
 .container {
-	width: 960px;
+	max-width: 960px;
 	margin: 0 auto;
 	padding: 10px;
 	display: flex;
@@ -23,19 +23,16 @@ nav {
 	font-size: 12px;
 }
 
-
 .left_nav {
 	display: flex;
 	justify-content: space-between;
 	width: calc(100%/12*6);
-
 }
 
 .right_nav {
 	display: flex;
 	justify-content: end;
 	width: calc(100%/12*6);
-	
 }
 
 .right_nav > div {
@@ -82,7 +79,6 @@ nav {
 	margin: auto;
 	padding: 12px 0px 12px 17px;
 	display: flex;
-
 }
 
 input {
@@ -106,6 +102,7 @@ input {
 	height: 27px;
 	width: 70px;
 	font-size: 12px;
+	margin-right: 10px;
 }
 
 .with_number {
@@ -145,19 +142,7 @@ li {
 	list-style: none;
 	font-size: 12px;
 	padding-left: 10px;
-	border-top: 0;
-	
-}
-
-.upper_li {
-	border-top: 1px solid rgb(147, 146, 146);
-	border-top-left-radius: 2px;
-	border-top-right-radius: 2px;
-}
-
-.down_li {
-	border-bottom-left-radius: 2px;
-	border-bottom-right-radius: 2px;
+	border-radius: 2px;
 }
 
 li a {
@@ -181,11 +166,6 @@ ul {
 	font-size: 12px;
 }
 
-.right {
-	transform: rotate(-45deg);
-	-webkit-transform: rotate(-45deg);
-}
-
 .hero_block {
 	width: calc(100%/12*9);
 }
@@ -197,7 +177,6 @@ ul {
 
 .hr_block {
 	padding: 2px 4px 0px 4px;
-
 }
 
 .nav_way {
@@ -241,6 +220,7 @@ button {
 .bt_stock {
 	display: flex;
 	flex-wrap: wrap;
+	justify-content: end;
 }
 
 .bt_new_old > button {
@@ -285,8 +265,6 @@ button {
 
 .items h2 {
 	font-size: 16px;
-	margin-bottom: -15px;
-
 }
 
 .content {
@@ -305,14 +283,7 @@ button {
 	font-size: 12px;
 	color: grey;
 }
-/*
-.price {
-	display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-content: center;
-}
-*/
+
 .item_price {
     display: flex;
 	justify-content: space-between;
@@ -336,7 +307,7 @@ button {
 
 /* --- ADAPTIVE ---   --- ADAPTIVE ---   --- ADAPTIVE --- */
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1000px) {
 	nav, .under_nav, .searchbar {
 		width: calc(100%/12*12);
 	}
@@ -351,19 +322,24 @@ button {
 	}
 
 	ul {
-		justify-content: space-between;
+		justify-content: center;
 		padding-top: 5px;
 		padding-bottom: 15px;
 	}
 
-	li {
-		font-size: 16px;
-		width: 225px;
-		height: 35px;
-	}
-
 	main {
 		width: calc(100%/12*12);
+	}
+}
+
+@media screen and (max-width: 730px) {
+	.items_result_list {
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+
+	.item_price {
+		margin-top: 15px;
 	}
 
 	nav, .search_parts, .submit, .with_number > span, .search_category, .nav_way, button, .price_type, .ab_items, .in_stock {
@@ -376,6 +352,14 @@ button {
 
 	input, .type_name, .items h2, b {
 		font-size: 20px;
+	}
+
+	.search_parts {
+		height: 31px;
+	}
+
+	.with_number > span {
+		width: max-content;
 	}
 
 	.bt_stock > button {
@@ -397,18 +381,42 @@ button {
 		width: 115px;
 	}
 
-	.content {
-		width: 430px;
-	}
-
 	.button_buy button {
 		width: 125px;
 		height: 47px;
 	}
+
+	li {
+		font-size: 16px;
+		width: 225px;
+		height: 35px;
+	}
+
+	.items h2 {
+		margin-top: 0px;
+	}
+
+	.content {
+		width: 100%;
+	}
 }
 
-@media screen and (max-width: 576px) {
-	.items_result_list {
-		width: calc(100%/12*12);
+@media screen and (max-width: 450px) {
+	.with_number > span {
+		display: none;
+	}	
+
+	.items {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+
+	.content {
+		justify-content: center;
+	}
+
+	.ab_items, .items h2 {
+		text-align: center;
 	}
 }
